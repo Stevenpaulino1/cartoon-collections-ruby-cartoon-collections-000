@@ -7,7 +7,6 @@ def roll_call_dwarves(dwarfNames)
  end
  end 
  
- 
  def summon_captain_planet(planeteerCalls)
    planeteerCalls.collect do |call| 
   call.capitalize + "!"
