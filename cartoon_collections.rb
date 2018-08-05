@@ -1,6 +1,12 @@
 def roll_call_dwarves(dwarfNames)
-  dwarfNames.each_with_index {|name, index| puts "#{index + 1} #{name}"}
+  dwarfNames.each_with_index do 
+    |name, index| 
+    if index > dwarfNames.length / 2
+      puts "#{index + 1} #{name}"
+  end 
  end
+ end 
+ 
  
  def summon_captain_planet(planeteerCalls)
    planeteerCalls.collect do |call| 
@@ -15,10 +21,13 @@ def long_planeteer_calls(calls)
     return false
   end 
 end
+ tims= ["apple", "banana", "chedder"] 
  
+ cheese_type[3] = "swiss"
+ cheese_type<< "swiss"
+ cheese_types = ["cheddar", "gouda", "camembert"]  
 def find_the_cheese(array)
-   cheese_types = ["cheddar", "gouda", "camembert"] 
- array.each do |food|  
+   array.each do |food|  
     cheese_types.each do |cheese|
       if food.include?(cheese)
         return food
@@ -27,3 +36,13 @@ def find_the_cheese(array)
     end
     return nil
  end
+ 
+ array=["flat", "boy", "time","chubby"]
+def words_with_b(array)
+  array.select do |word|
+    word.include?("b")
+  end 
+end 
+
+    
+end
